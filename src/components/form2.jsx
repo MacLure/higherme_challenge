@@ -5,14 +5,15 @@ class Form2 extends Component {
   render() { 
     return ( 
       <div>
-        FORM 2
+        <h2>FORM 2</h2>
         <form>
-          <label>
-          </label>
-          <input className="inputText" type="text" placeholder="Text input for Form 2" />
-          <input className="inputText" type="number" placeholder="Number input for Form 2" />
-          <input className="inputText" type="email" placeholder="Email input for Form 2" />
-          <input className="inputText" type="password" placeholder="Password input for Form 2" />
+          <div  className="formInputs">
+            <input type="text" placeholder="Text input for Form 2" />
+            <input type="number" placeholder="Number input for Form 2" />
+            <input type="email" placeholder="Email input for Form 2" />
+            <input type="password" placeholder="Password input for Form 2" />
+          </div>
+          <input type="submit" value="Submit Form 2" />
         </form>
       </div>
      );

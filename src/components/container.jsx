@@ -8,10 +8,12 @@ class Container extends Component {
   render() { 
     return ( 
       <div>
-        <div>
+        <div className="formSelect">
           Which form shall I display?
-          <div className="formSelectButton">Form 1</div>
-          <div className="formSelectButton">Form 2</div>
+          <div>
+            <div className="formSelectButton">Form 1</div>
+            <div className="formSelectButton">Form 2</div>
+          </div>
         </div>
         <Form1 />
         <Form2 />
