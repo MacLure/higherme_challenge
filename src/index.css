@@ -38,10 +38,10 @@ input {
 }
 
 input[type="submit"] {
+  display: inline-block;
   color: white;
   background-color: royalblue;
   border: none;
-  display: block;
   font-size: 1em;
   padding: 8px;
   border-radius: 2px;

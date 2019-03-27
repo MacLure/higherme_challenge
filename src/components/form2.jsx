@@ -12,8 +12,9 @@ class Form2 extends Component {
             <input type="number" placeholder="Number input for Form 2" />
             <input type="email" placeholder="Email input for Form 2" />
             <input type="password" placeholder="Password input for Form 2" />
+            <input type="submit" value="Submit Form 2" />
+
           </div>
-          <input type="submit" value="Submit Form 2" />
         </form>
       </div>
      );
