@@ -13,38 +13,3 @@ code {
     monospace;
 }
 
-.formSelect {
-  text-align: center;
-}
-
-.formSelectButton {
-  display: inline-block;
-  color: white;
-  background-color: grey;
-  margin: 5px;
-  padding: 5px;
-  border-radius: 2px;
-}
-
-.formInputs {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-}
-
-input {
-  border: 1px solid grey;
-  margin: 10px auto;
-  padding: 5px;
-  border-radius: 2px;
-}
-
-input[type="submit"] {
-  display: inline-block;
-  color: white;
-  background-color: royalblue;
-  border: none;
-  font-size: 1em;
-  padding: 8px;
-  border-radius: 2px;
-}

@@ -7,7 +7,7 @@ class Form1 extends Component {
     super(props)
 
     this.state = { 
-      name: '',
+      text: '',
       number: 0,
       email: '',
       password: '',
@@ -15,7 +15,7 @@ class Form1 extends Component {
   }
 
    onTextChange = (e) => {
-     this.setState({name: e.target.value})
+     this.setState({text: e.target.value})
    }
 
    onNumChange = (e) => {
@@ -37,15 +37,15 @@ class Form1 extends Component {
 
   render() { 
     return ( 
-      <div>
+      <div style={styles.form1}>
       <h1>Form 1</h1>
         <form onSubmit ={ this.onSubmit}>
-          <div  className="formInputs">
-            <input type="text" value={this.state.text} onChange={this.onTextChange} placeholder="Name" autoFocus />
-            <input type="number" value={this.state.number} onChange={this.onNumChange} placeholder="Number" />
-            <input type="email" value={this.state.email} onChange={this.onEmailChange} placeholder="Email" autoComplete="username" />
-            <input type="password" value={this.state.password} onChange={this.onPasswordChange} placeholder="Secret phrase" autoComplete="current-password"/>
-            <input type="submit" value="Submit Form 1" />
+          <div style={styles.formInputs}>
+            <input type="text" value={this.state.text} onChange={this.onTextChange} placeholder="Name" style={styles.input} autoFocus />
+            <input type="number" value={this.state.number} onChange={this.onNumChange} placeholder="Number" style={styles.input} />
+            <input type="email" value={this.state.email} onChange={this.onEmailChange} placeholder="Email" autoComplete="username" style={styles.input} />
+            <input type="password" value={this.state.password} onChange={this.onPasswordChange} placeholder="Secret phrase" autoComplete="current-password" style={styles.input}/>
+            <input type="submit" value="Submit Form 1" style={styles.submitButton} />
           </div>
         </form>
       </div>
@@ -54,3 +54,35 @@ class Form1 extends Component {
 }
  
 export default connect()(Form1)
+
+const styles = {}
+
+styles.form1 = {
+  margin: '10px',
+  padding: '10px',
+  backgroundColor: 'lightcoral',
+  borderRadius: '5px',
+}
+
+styles.formInputs = {
+  display: 'flex',
+  flexFlow: 'row wrap',
+  justifyContent: 'space-evenly',
+}
+
+styles.input = {
+  border: '1px solid black',
+  margin: '10px auto',
+  padding: '5px',
+  borderRadius: '2px',
+}
+
+styles.submitButton = {
+  display: 'inline-block',
+  color: 'black',
+  backgroundColor: 'rgba(255,255,255,0.4)',
+  border: '1px solid black',
+  fontSize: '1em',
+  padding: '8px',
+  borderRadius: '5px',
+}

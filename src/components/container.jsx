@@ -14,20 +14,21 @@ class Container extends Component {
    }
 
   render() { 
+
     return ( 
       <div>
-        <div className="formSelect">
-          Which form shall I display?
+        <div style={styles.formSelect}>
+          <h1>Select Form:</h1>
           <div>
             <div
-              className="formSelectButton"
+              style={this.state.selectedForm === 1 ? styles.formSelectButtonActive : styles.formSelectButtonPassive}
               onClick={e=>{this.switchForm(1)}}
             >
               Form 1
             </div>
             <div
-              className="formSelectButton"
-              onClick={e=>{this.switchForm(2)}}
+            style={this.state.selectedForm === 2 ? styles.formSelectButtonActive : styles.formSelectButtonPassive}
+            onClick={e=>{this.switchForm(2)}}
             >
               Form 2
             </div>
@@ -42,3 +43,27 @@ class Container extends Component {
 }
  
 export default Container;
+
+
+const styles = {}
+styles.formSelect = {
+  textAlign: 'center',
+}
+
+styles.formSelectButtonPassive = {
+  display: 'inline-block',
+  color: 'white',
+  backgroundColor: 'grey',
+  margin: '5px',
+  padding: '5px',
+  borderRadius: '2px',
+}
+
+styles.formSelectButtonActive = {
+  display: 'inline-block',
+  color: 'white',
+  backgroundColor: 'black',
+  margin: '5px',
+  padding: '5px',
+  borderRadius: '2px',
+}

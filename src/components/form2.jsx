@@ -7,7 +7,7 @@ class Form2 extends Component {
     super(props)
 
     this.state = { 
-      name: '',
+      text: '',
       number: 0,
       email: '',
       password: '',
@@ -15,7 +15,7 @@ class Form2 extends Component {
   }
 
    onTextChange = (e) => {
-    this.setState({name: e.target.value})
+    this.setState({text: e.target.value})
   }
 
   onNumChange = (e) => {
@@ -35,22 +35,54 @@ class Form2 extends Component {
    this.props.dispatch(submitForm2(this.state))
  }
 
-  render() { 
-    return ( 
-      <div>
-        <h1>Form 2</h1>
-        <form onSubmit ={ this.onSubmit}>
-          <div  className="formInputs">
-          <input type="text" value={this.state.text} onChange={this.onTextChange} placeholder="Name" autoFocus />
-          <input type="number" value={this.state.number} onChange={this.onNumChange} placeholder="Number" />
-          <input type="email" value={this.state.email} onChange={this.onEmailChange} placeholder="Email" autoComplete="username" />
-          <input type="password" value={this.state.password} onChange={this.onPasswordChange} placeholder="Secret phrase" autoComplete="current-password"/>
-          <input type="submit" value="Submit Form 2" />
-          </div>
-        </form>
-      </div>
-     );
-  }
+ render() { 
+  return ( 
+    <div style={styles.form2}>
+    <h1>Form 2</h1>
+      <form onSubmit ={ this.onSubmit}>
+        <div style={styles.formInputs}>
+          <input type="text" value={this.state.text} onChange={this.onTextChange} placeholder="Name" style={styles.input} autoFocus />
+          <input type="number" value={this.state.number} onChange={this.onNumChange} placeholder="Number" style={styles.input} />
+          <input type="email" value={this.state.email} onChange={this.onEmailChange} placeholder="Email" autoComplete="username" style={styles.input} />
+          <input type="password" value={this.state.password} onChange={this.onPasswordChange} placeholder="Secret phrase" autoComplete="current-password" style={styles.input}/>
+          <input type="submit" value="Submit Form 2" style={styles.submitButton} />
+        </div>
+      </form>
+    </div>
+   );
 }
- 
+}
+
 export default connect()(Form2)
+
+const styles = {}
+
+styles.form2 = {
+margin: '10px',
+padding: '10px',
+backgroundColor: 'skyblue',
+borderRadius: '5px',
+}
+
+styles.formInputs = {
+display: 'flex',
+flexFlow: 'row wrap',
+justifyContent: 'space-evenly',
+}
+
+styles.input = {
+border: '1px solid black',
+margin: '10px auto',
+padding: '5px',
+borderRadius: '3px',
+}
+
+styles.submitButton = {
+display: 'inline-block',
+color: 'black',
+backgroundColor: 'rgba(255,255,255,0.4)',
+border: '1px solid black',
+fontSize: '1em',
+padding: '8px',
+borderRadius: '5px',
+}
