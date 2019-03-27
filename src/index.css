@@ -20,9 +20,10 @@ code {
 .formSelectButton {
   display: inline-block;
   color: white;
-  background-color: black;
+  background-color: grey;
   margin: 5px;
   padding: 5px;
+  border-radius: 2px;
 }
 
 .formInputs {
@@ -35,6 +36,7 @@ input {
   border: 2px solid black;
   margin: 10px auto;
   padding: 5px;
+  border-radius: 2px;
 }
 
 input[type="submit"] {

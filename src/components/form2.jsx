@@ -10,8 +10,8 @@ class Form2 extends Component {
           <div  className="formInputs">
             <input type="text" placeholder="Text input for Form 2" />
             <input type="number" placeholder="Number input for Form 2" />
-            <input type="email" placeholder="Email input for Form 2" />
-            <input type="password" placeholder="Password input for Form 2" />
+            <input type="email" placeholder="Email input for Form 2" autoComplete="username" />
+            <input type="password" placeholder="Password input for Form 2" autoComplete="current-password"/>
             <input type="submit" value="Submit Form 2" />
 
           </div>
