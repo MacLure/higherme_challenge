@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Form1 from './form1'
 import Form2 from './form2'
+import FormDataList from './formDataList'
 
 
 class Container extends Component {
@@ -34,6 +35,7 @@ class Container extends Component {
         </div>
         {this.state.selectedForm === 1 ? <Form1 /> : null}
         {this.state.selectedForm === 2 ? <Form2 /> : null}
+        <FormDataList />
       </div>
      );
   }

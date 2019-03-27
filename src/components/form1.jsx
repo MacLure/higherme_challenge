@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
 
 class Form1 extends Component {
-  state = {  }
+  state = { 
+    name: '',
+    number: 0,
+    email: '',
+    password: '',
+   }
   render() { 
     return ( 
       <div>
       <h2>FORM 1</h2>
         <form>
           <div  className="formInputs">
-            <input type="text" placeholder="Text input for Form 1" />
-            <input type="number" placeholder="Number input for Form 1" />
-            <input type="email" placeholder="Email input for Form 1" autoComplete="username" />
-            <input type="password" placeholder="Password input for Form 1" autoComplete="current-password"/>
+            <input type="text" placeholder="Name" />
+            <input type="number" placeholder="Number" />
+            <input type="email" placeholder="Email" autoComplete="username" />
+            <input type="password" placeholder="Password" autoComplete="current-password"/>
             <input type="submit" value="Submit Form 1" />
 
           </div>
