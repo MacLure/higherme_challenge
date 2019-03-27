@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import ListItem from './listItem';
 
 
 const FormDataList = (props) => {
@@ -14,23 +15,13 @@ const FormDataList = (props) => {
       <h2>Form 1:</h2>
       <p>{form1Data.length} {form1Data.length === 1 ? 'entry' : 'entries'}</p>
       {form1Data.map((entry, index) =>
-      (<div key={index}>
-        <div>{entry.text}</div>
-        <div>{entry.number}</div>
-        <div>{entry.email}</div>
-        <div>{entry.password}</div>
-        </div>
-      ))}
-      <h2>Form 1:</h2>
+        <ListItem key={index} entry={entry} />
+      )}
+      <h2>Form 2:</h2>
       <p>{form2Data.length} {form2Data.length === 1 ? 'entry' : 'entries'}</p>
       {form2Data.map((entry, index) =>
-        (<div key={index}>
-          <div>{entry.text}</div>
-          <div>{entry.number}</div>
-          <div>{entry.email}</div>
-          <div>{entry.password}</div>
-          </div>
-        ))}
+        <ListItem key={index} entry={entry} />
+      )}
     </div>
    );
 }
