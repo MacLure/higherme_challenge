@@ -28,6 +28,7 @@ store.dispatch(submitForm2(
   }
 ))
 
+
 console.log(store.getState())
 
 const jsx = (
