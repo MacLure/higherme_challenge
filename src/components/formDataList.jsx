@@ -10,7 +10,7 @@ const FormDataList = (props) => {
 
   return ( 
     <div style={styles.list}>
-      <h1>Form Data List</h1>
+      <h1 style={styles.heading}>Form Data List</h1>
       <div style={styles.list1}>
         <h2 style={styles.subHeading}>Form 1:</h2>
         {form1Data.length} {form1Data.length === 1 ? 'entry' : 'entries'}
@@ -42,6 +42,10 @@ export default connect(mapStateToProps)(FormDataList)
 const styles = {}
 
 styles.list = {
+}
+
+styles.heading = {
+  textAlign: 'center',
 }
 
 styles.subHeading = {

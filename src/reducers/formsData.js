@@ -1,4 +1,19 @@
-const formsDataDefaultState = []
+const formsDataDefaultState = [
+  {
+    form: 1,
+    text: "example 1",
+    number: 123,
+    email: 'example@email.com',
+    password: 'examplePhrase'
+  },
+  {
+    form: 2,
+    text: "example 2",
+    number: 456,
+    email: 'example2@email.com',
+    password: 'example2Phrase'
+  }
+]
 
 export default (state = formsDataDefaultState, action) => {
   switch (action.type) {
