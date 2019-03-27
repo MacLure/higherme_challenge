@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Form2 extends Component {
   state = { 
-    name: '',
+    text: '',
     number: 0,
     email: '',
     password: '',
@@ -14,10 +14,10 @@ class Form2 extends Component {
         <h1>Form 2</h1>
         <form>
           <div  className="formInputs">
-          <input type="text" placeholder="Name" />
-          <input type="number" placeholder="Number" />
-          <input type="email" placeholder="Email" autoComplete="username" />
-          <input type="password" placeholder="Secret phrase" autoComplete="current-password"/>
+          <input type="text" value={this.state.text} placeholder="Name" autoFocus />
+          <input type="number" value={this.state.number} placeholder="Number" />
+          <input type="email" value={this.state.email} placeholder="Email" autoComplete="username" />
+          <input type="password" value={this.state.password} placeholder="Secret phrase" autoComplete="current-password"/>
           <input type="submit" value="Submit Form 2" />
 
           </div>
